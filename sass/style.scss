@@ -1,0 +1,50 @@
+@import "lib/reset.scss";
+
+body {
+  background: #000;
+  font-family: sans-serif;
+}
+
+p {
+  color: #FFF;
+  margin: 1rem;
+}
+
+.table{
+  width: 100%;
+
+  thead{
+    background: #000;
+    color: #FFF;
+    th{
+      background: #CCC;
+    }
+  }
+
+  td {
+    border: 1px solid #CCC;
+  }
+}
+
+.btn {
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  background: #2f60d9;
+  padding: 5px;
+  &:hover {
+    background: #0e2c7f;
+  }
+
+  @media only screen and (max-width: 1200px){
+    padding: 10px;
+  }
+}
+
+.btn-danger{
+  @extend .btn;
+  background: red;
+  &:hover{
+    background: darkred;
+  }
+}
