@@ -1,4 +1,5 @@
 @import "lib/reset.scss";
+@import "lib/variables.scss";
 
 body {
   background: #000;
@@ -26,25 +27,90 @@ p {
   }
 }
 
+.demo-btn {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
 .btn {
+  margin: 5px;
+  text-align: center;
+  display: block;
   border-radius: 3px;
   text-decoration: none;
   color: #fff;
-  background: #2f60d9;
-  padding: 5px;
-  &:hover {
-    background: #0e2c7f;
-  }
-
-  @media only screen and (max-width: 1200px){
-    padding: 10px;
-  }
+  padding:10px;
+  width: 100px;
+  border: none;
 }
 
 .btn-danger{
   @extend .btn;
-  background: red;
+  background: $danger;
   &:hover{
-    background: darkred;
+    background: lighten($danger,10);
   }
+}
+.btn-primary{
+  @extend .btn;
+  background: $primary;
+  border-color: $primary;
+  &:hover{
+    background: lighten($primary,10);
+  }
+}
+
+.btn-success{
+  @extend .btn;
+  background: $success;
+  &:hover{
+    background: lighten($success,10);
+  }
+}
+
+.btn-secondary{
+  @extend .btn;
+  background: $secondary;
+  &:hover{
+    background: lighten($secondary,10);
+  }
+}
+
+.btn-info{
+  @extend .btn;
+  background: $info;
+  &:hover{
+    background: lighten($info,10);
+  }
+}
+
+.btn-help{
+  @extend .btn;
+  background: $help;
+  &:hover{
+    background: lighten($help,10);
+  }
+}
+
+.btn-warning{
+  @extend .btn;
+  background: $warning;
+  &:hover{
+    background: lighten($warning,10);
+  }
+}
+
+.divider{
+  margin: 1em;
+  border-top: 1px solid $primary;
+}
+
+.btn-rounded {
+  border-radius: 20px;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border: 1px solid;
 }
