@@ -1,36 +1,51 @@
-@import "lib/reset.scss";
-@import "lib/variables.scss";
+@import "lib/reset";
+@import "lib/mixin";
+@import "lib/variables";
 
 body {
-  background: #000;
+  background: #000000;
   font-family: sans-serif;
-}
-
-p {
-  color: #FFF;
-  margin: 1rem;
-}
-
-.table{
-  width: 100%;
-
-  thead{
-    background: #000;
-    color: #FFF;
-    th{
-      background: #CCC;
-    }
-  }
-
-  td {
-    border: 1px solid #CCC;
-  }
+  margin-right: 25%;
+  margin-left: 25%;
+  border: 1px solid white;
 }
 
 .demo-btn {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+}
+
+.primary {
+  color: $primary!important;
+}
+
+.secondary {
+  color: $secondary!important;
+}
+.success {
+  color:$success;
+}
+
+.danger{
+  color:$danger;
+}
+
+.help {
+  color:$help;
+}
+
+.warning{
+  color:$warning;
+}
+
+.info{
+  color:$info;
+}
+
+.divider{
+  margin: 1em;
+  border-top: 1px solid;
 }
 
 .btn {
@@ -43,67 +58,107 @@ p {
   padding:10px;
   width: 100px;
   border: none;
+  &:disabled{
+    background-color: grey;
+  }
 }
 
 .btn-danger{
   @extend .btn;
   background: $danger;
+  border-color: $danger!important;
   &:hover{
     background: lighten($danger,10);
+  }
+  &:disabled{
+    background: darken($danger,30);
+    color: #aaa9a9;
   }
 }
 .btn-primary{
   @extend .btn;
   background: $primary;
-  border-color: $primary;
+  border-color: $primary!important;
   &:hover{
     background: lighten($primary,10);
+  }
+  &:disabled{
+    background: darken($primary,30);
+    color: #aaa9a9;
+  }
+  &:focus{
+    border-radius: 50px;
   }
 }
 
 .btn-success{
   @extend .btn;
   background: $success;
+  border-color: $success!important;
   &:hover{
     background: lighten($success,10);
+  }
+  &:disabled{
+    background: darken($success,30);
+    color: #aaa9a9;
   }
 }
 
 .btn-secondary{
   @extend .btn;
   background: $secondary;
+  border-color: $secondary!important;
   &:hover{
     background: lighten($secondary,10);
+  }
+  &:disabled{
+    background: darken($secondary,30);
+    color: #aaa9a9;
   }
 }
 
 .btn-info{
   @extend .btn;
   background: $info;
+  border-color: $info!important;
   &:hover{
     background: lighten($info,10);
+  }
+  &:disabled{
+    background: darken($info,30);
+    color: #aaa9a9;
   }
 }
 
 .btn-help{
   @extend .btn;
   background: $help;
+  border-color: $help!important;
   &:hover{
     background: lighten($help,10);
+  }
+  &:disabled{
+    background: darken($help,30);
+    color: #aaa9a9;
   }
 }
 
 .btn-warning{
   @extend .btn;
   background: $warning;
+  border-color: $warning!important;
   &:hover{
     background: lighten($warning,10);
+  }
+  &:disabled{
+    background: darken($warning,30);
+    color: #aaa9a9;
   }
 }
 
 .divider{
   margin: 1em;
-  border-top: 1px solid $primary;
+  border-top: 1px solid;
 }
 
 .btn-rounded {
