@@ -1,6 +1,6 @@
 @import "lib/reset";
-@import "lib/mixin";
 @import "lib/variables";
+@import "lib/mixin";
 
 body {
   background: #000000;
@@ -48,11 +48,11 @@ body {
   border-top: 1px solid;
 }
 
-.btn {
+%btn {
   margin: 5px;
   text-align: center;
   display: block;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   color: #fff;
   padding:10px;
@@ -64,7 +64,7 @@ body {
 }
 
 .btn-danger{
-  @extend .btn;
+  @extend %btn;
   background: $danger;
   border-color: $danger!important;
   &:hover{
@@ -76,7 +76,7 @@ body {
   }
 }
 .btn-primary{
-  @extend .btn;
+  @extend %btn;
   background: $primary;
   border-color: $primary!important;
   &:hover{
@@ -86,13 +86,10 @@ body {
     background: darken($primary,30);
     color: #aaa9a9;
   }
-  &:focus{
-    border-radius: 50px;
-  }
 }
 
 .btn-success{
-  @extend .btn;
+  @extend %btn;
   background: $success;
   border-color: $success!important;
   &:hover{
@@ -105,7 +102,7 @@ body {
 }
 
 .btn-secondary{
-  @extend .btn;
+  @extend %btn;
   background: $secondary;
   border-color: $secondary!important;
   &:hover{
@@ -118,7 +115,7 @@ body {
 }
 
 .btn-info{
-  @extend .btn;
+  @extend %btn;
   background: $info;
   border-color: $info!important;
   &:hover{
@@ -131,7 +128,7 @@ body {
 }
 
 .btn-help{
-  @extend .btn;
+  @extend %btn;
   background: $help;
   border-color: $help!important;
   &:hover{
@@ -144,7 +141,7 @@ body {
 }
 
 .btn-warning{
-  @extend .btn;
+  @extend %btn;
   background: $warning;
   border-color: $warning!important;
   &:hover{

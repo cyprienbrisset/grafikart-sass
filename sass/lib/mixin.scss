@@ -1,0 +1,6 @@
+@mixin disabled($color: $primary){
+  &:disabled{
+    background: darken($color,30);
+    color: #aaa9a9;
+  }
+}
