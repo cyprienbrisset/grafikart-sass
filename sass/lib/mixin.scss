@@ -1,6 +1,29 @@
+@mixin btn-color($color){
+  background: $color;
+  border-color: $color!important;
+  @include hover($color);
+  @include text-color($color);
+  @include disabled($color);
+}
+
+
 @mixin disabled($color: $primary){
   &:disabled{
     background: darken($color,30);
     color: #aaa9a9;
+  }
+}
+
+@mixin hover ($color: $primary) {
+  &:hover{
+    background: lighten($color,10);
+  }
+}
+
+@mixin text-color ($color: $primary){
+  @if(lightness($color)){
+    color: #fff;
+  } @else {
+    color: #000;
   }
 }

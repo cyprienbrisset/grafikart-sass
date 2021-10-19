@@ -58,34 +58,6 @@ body {
   margin: 10px;
 }
 
-.primary {
-  color: #4D9DE0 !important;
-}
-
-.secondary {
-  color: #757761 !important;
-}
-
-.success {
-  color: #3bb24b;
-}
-
-.danger {
-  color: #de3d3c;
-}
-
-.help {
-  color: #6b54b8;
-}
-
-.warning {
-  color: #e0ba1c;
-}
-
-.info {
-  color: #00d2f9;
-}
-
 .divider {
   margin: 1em;
   border-top: 1px solid;
@@ -97,9 +69,9 @@ body {
   display: block;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
   padding: 10px;
   width: 100px;
+  min-width: 100px;
   border: none;
 }
 .btn-warning:disabled, .btn-help:disabled, .btn-info:disabled, .btn-secondary:disabled, .btn-success:disabled, .btn-primary:disabled, .btn-danger:disabled {
@@ -109,6 +81,7 @@ body {
 .btn-danger {
   background: #de3d3c;
   border-color: #de3d3c !important;
+  color: #fff;
 }
 .btn-danger:hover {
   background: #e56868;
@@ -121,6 +94,7 @@ body {
 .btn-primary {
   background: #4D9DE0;
   border-color: #4D9DE0 !important;
+  color: #fff;
 }
 .btn-primary:hover {
   background: #78b5e8;
@@ -133,6 +107,7 @@ body {
 .btn-success {
   background: #3bb24b;
   border-color: #3bb24b !important;
+  color: #fff;
 }
 .btn-success:hover {
   background: #58c867;
@@ -145,6 +120,7 @@ body {
 .btn-secondary {
   background: #757761;
   border-color: #757761 !important;
+  color: #fff;
 }
 .btn-secondary:hover {
   background: #909279;
@@ -157,6 +133,7 @@ body {
 .btn-info {
   background: #00d2f9;
   border-color: #00d2f9 !important;
+  color: #fff;
 }
 .btn-info:hover {
   background: #2ddeff;
@@ -169,6 +146,7 @@ body {
 .btn-help {
   background: #6b54b8;
   border-color: #6b54b8 !important;
+  color: #fff;
 }
 .btn-help:hover {
   background: #8a78c7;
@@ -181,6 +159,7 @@ body {
 .btn-warning {
   background: #e0ba1c;
   border-color: #e0ba1c !important;
+  color: #fff;
 }
 .btn-warning:hover {
   background: #e8c947;
@@ -188,11 +167,6 @@ body {
 .btn-warning:disabled {
   background: #58490b;
   color: #aaa9a9;
-}
-
-.divider {
-  margin: 1em;
-  border-top: 1px solid;
 }
 
 .btn-rounded {

@@ -16,33 +16,6 @@ body {
   margin: 10px;
 }
 
-.primary {
-  color: $primary!important;
-}
-
-.secondary {
-  color: $secondary!important;
-}
-.success {
-  color:$success;
-}
-
-.danger{
-  color:$danger;
-}
-
-.help {
-  color:$help;
-}
-
-.warning{
-  color:$warning;
-}
-
-.info{
-  color:$info;
-}
-
 .divider{
   margin: 1em;
   border-top: 1px solid;
@@ -54,9 +27,9 @@ body {
   display: block;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
   padding:10px;
   width: 100px;
+  min-width:100px;
   border: none;
   &:disabled{
     background-color: grey;
@@ -65,97 +38,36 @@ body {
 
 .btn-danger{
   @extend %btn;
-  background: $danger;
-  border-color: $danger!important;
-  &:hover{
-    background: lighten($danger,10);
-  }
-  &:disabled{
-    background: darken($danger,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($danger);
 }
 .btn-primary{
   @extend %btn;
-  background: $primary;
-  border-color: $primary!important;
-  &:hover{
-    background: lighten($primary,10);
-  }
-  &:disabled{
-    background: darken($primary,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($primary);
 }
 
 .btn-success{
   @extend %btn;
-  background: $success;
-  border-color: $success!important;
-  &:hover{
-    background: lighten($success,10);
-  }
-  &:disabled{
-    background: darken($success,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($success);
 }
 
 .btn-secondary{
   @extend %btn;
-  background: $secondary;
-  border-color: $secondary!important;
-  &:hover{
-    background: lighten($secondary,10);
-  }
-  &:disabled{
-    background: darken($secondary,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($secondary);
 }
 
 .btn-info{
   @extend %btn;
-  background: $info;
-  border-color: $info!important;
-  &:hover{
-    background: lighten($info,10);
-  }
-  &:disabled{
-    background: darken($info,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($info);
 }
 
 .btn-help{
   @extend %btn;
-  background: $help;
-  border-color: $help!important;
-  &:hover{
-    background: lighten($help,10);
-  }
-  &:disabled{
-    background: darken($help,30);
-    color: #aaa9a9;
-  }
+  @include btn-color($help);
 }
 
 .btn-warning{
   @extend %btn;
-  background: $warning;
-  border-color: $warning!important;
-  &:hover{
-    background: lighten($warning,10);
-  }
-  &:disabled{
-    background: darken($warning,30);
-    color: #aaa9a9;
-  }
-}
-
-.divider{
-  margin: 1em;
-  border-top: 1px solid;
+  @include btn-color($warning);
 }
 
 .btn-rounded {
