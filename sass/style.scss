@@ -1,13 +1,16 @@
-@import "lib/reset";
-@import "lib/variables";
-@import "lib/mixin";
+@import "themes/default/_reset";
+@import "themes/default/_variables";
+@import "themes/default/_mixin";
+@import "themes/default/_fonts";
+@import "themes/default/_layout";
 
 body {
-  background: #000000;
-  font-family: sans-serif;
+  background: $background;
+  font-family: $fontFamily;
+  font-size: $fontSize;
   margin-right: 25%;
   margin-left: 25%;
-  border: 1px solid white;
+  border: 1px solid $backgroundSecondary;
 }
 
 .demo-btn {
@@ -19,6 +22,7 @@ body {
 .divider{
   margin: 1em;
   border-top: 1px solid;
+  color: $backgroundSecondary;
 }
 
 %btn {
@@ -77,4 +81,9 @@ body {
 .btn-outlined {
   background-color: transparent;
   border: 1px solid;
+  @if(lightness($background)){
+    color: #fff!important;
+  } @else {
+    color: #000!important;
+  }
 }
